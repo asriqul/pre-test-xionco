@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Produk &amp; Stok</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Admin Panel Toko</h1>
+    <p>Kelola dan lihat daftar produk &amp; stok.</p>
+    <nav class="navbar">
+        <a href="/">Pembelian</a>
+        <a href="/products" class="active">Daftar Produk</a>
+    </nav>
+</header>
+
+<main>
+    <section id="product-form-section">
+        <h2>Kelola Produk</h2>
+        <form id="product-form">
+            <input type="hidden" id="product-id">
+
+            <div class="form-group">
+                <label for="product-name-input">Nama Produk:</label>
+                <input type="text" id="product-name-input" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product-price-input">Harga Satuan (Rp):</label>
+                <input type="number" id="product-price-input" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product-stock-input">Stok Saat Ini:</label>
+                <input type="number" id="product-stock-input" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="product-submit-btn" class="btn primary">Tambah Produk</button>
+                <button type="button" id="product-cancel-edit" class="btn">Batal Edit</button>
+            </div>
+        </form>
+        <div id="product-message" class="message"></div>
+    </section>
+
+    <section id="product-stock-section">
+        <h2>Daftar Produk &amp; Stok</h2>
+        <table id="product-stock-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama Produk</th>
+                <th>Harga Satuan</th>
+                <th>Stok Saat Ini</th>
+                <th>Aksi</th>
+            </tr>
+            </thead>
+            <tbody id="product-stock-list">
+            <tr><td colspan="5" style="text-align: center;">Memuat data...</td></tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<script src="/js/scripts.js"></script>
+</body>
+</html>

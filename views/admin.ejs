@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page: Input & Cancel Pembelian</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <h1>Admin Panel Toko</h1>
+    <p>Input Data Pembelian Baru dan Batalkan Transaksi.</p>
+    <nav class="navbar">
+        <a href="/" class="active">Pembelian</a>
+        <a href="/products">Daftar Produk</a>
+    </nav>
+</header>
+
+<main>
+    <section id="input-section">
+        <h2>Input Pembelian Baru</h2>
+        <form id="purchase-form">
+            <div class="form-group">
+                <label for="product-name">Nama Produk:</label>
+                <select id="product-name" required>
+                    <option value="">-- Pilih Produk --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Kuantitas:</label>
+                <input type="number" id="quantity" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Harga Satuan (Rp):</label>
+                <input type="number" id="price" step="0.01" min="0" required readonly>
+            </div>
+
+            <button type="submit" class="btn primary">Simpan Pembelian</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="list-section">
+        <h2>Daftar Transaksi Pembelian</h2>
+        <div id="message-area" class="message"></div>
+
+        <table id="purchase-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tanggal</th>
+                <th>Produk</th>
+                <th>Kuantitas</th>
+                <th>Harga Satuan</th>
+                <th>Total</th>
+                <th>Aksi</th>
+            </tr>
+            </thead>
+            <tbody id="purchase-list">
+            <tr><td colspan="7" style="text-align: center;">Memuat data...</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<script src="/js/scripts.js"></script>
+</body>
+</html>
