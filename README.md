@@ -41,7 +41,6 @@ Aplikasi web sederhana admin panel untuk mengelola data pembelian dan kelola pro
     - Jika menggunakan Git:
       ```bash
       git clone <URL_REPOSITORY_ANDA>
-      cd xionco-test
       ```
 
 2.  **Install Dependensi**
